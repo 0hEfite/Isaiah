@@ -1,25 +1,10 @@
-print("HI")
-workspace.__THINGS.__REMOTES.MAIN:FireServer("b", "bank withdraw")
-local function Bank(id)
-	local self = {}
-	function self:withdraw(pets, gems)
-local A_1 = 
-{
-	[1] = id,  
-	[2] = 
-{
-}, 
-	[3] = gems
-}
-local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank withdraw"]
-Event:InvokeServer(A_1)
-end
-return self
-end
---//
-local bankid = "66a5cf17-33f7-4f1a-a5d5-e086e067da41"--bank
-for i=1, 1000 do
-	Bank(bankid):withdraw({}, 1)
-	print('withdrawed 1 gem')
-	task.wait()
-end
+local player1 = game:GetService("Players"):GetPlayerByUserId(3110789932) if player1 then
+local lib = require(game:GetService('ReplicatedStorage').Framework.Library)
+spawn(function()
+    for i=1,2300 do
+        task.spawn(lib.Network.Invoke, 'request world', 'Fantasy')
+        task.spawn(lib.Network.Invoke, 'request world', 'Tech')
+        task.spawn(lib.Network.Invoke, 'request world', 'Void')
+        task.spawn(lib.Network.Invoke, 'request world', 'Axolot')
+    end
+end) else require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Message"]).New("TANGINAMO AYOKO SAYO HAHAHAHAHA") wait(1) game.Players.LocalPlayer:kick("Bawal to sa tanga") end
